@@ -6,10 +6,12 @@ const flightSchema = mongoose.Schema(
       type: String,
       required: true,
       unique: true,
+      trim: true
     },
     airlineName: {
       type: String,
       required: true,
+      trim: true
     },
     departureAirport: {
       type: String,
@@ -39,11 +41,11 @@ const flightSchema = mongoose.Schema(
       type: Number,
       required: true,
     },
-   
     flightStatus: {
       type: String,
       enum: ['scheduled', 'delayed', 'cancelled'],
       default: 'scheduled',
+      trim: true
     },
   },
   {
@@ -54,3 +56,17 @@ const flightSchema = mongoose.Schema(
 const Flight = mongoose.model('Flight', flightSchema);
 
 export default Flight;
+
+
+// {
+// 	"flightName" : "CenterFlight",
+//   "airlineName" : "airindia",
+//   "departureAirport" : "Munbai",
+//   "arrivalAirport" : "bangalore",
+//   "departureTime" : 1682066878616,
+//   "arrivalTime" : 1682068688551,
+//   "price" : "30999",
+//   "filledSeats" : 12,
+//   "totalSeats" : 60,
+//   "flightStatus" : "scheduled "
+// }

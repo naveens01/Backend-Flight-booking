@@ -3,61 +3,15 @@ import mongoose from 'mongoose'
 
 const bookingsSchema = mongoose.Schema(
   {
-    passenger_name: {
-      type: String,
-      required: true,
+    passengerId: {
+      type : mongoose.Schema.Types.ObjectId,
+      ref : 'User',
     },
-    passenger_id: {
-        type: Number,
-        required: true,
-        unique: true,
-      },
-      flight_name: {
-        type: String,
-        required: true,
-      },
-      flight_id: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref : "Flight",
-        required: true,
-      },
-    email: 
-    {
-      type: String,
-      required: true,
-      unique: true,
+    flightId : {
+      type : mongoose.Schema.Types.ObjectId,
+      ref : 'Flight',
     },
-    from_place: 
-    {
-      type: String,
-      required: true,
-    },
-    to_place:{
-        type: String,
-        required : true,
-    },
-    passenger_departure_time: 
-    {
-        type: Date,
-        required: true,
-      },
-      passenger_arrival_time: 
-      {
-        type: Date,
-        required: true,
-      },
-    amount:
-      {
-        type : Number,
-        required: true,
-      },
-
-    isAdmin: {
-      type: Boolean,
-      required: true,
-      default: false,
-    },
-
+   
   },
   {
     timestamps: true,

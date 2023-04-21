@@ -12,9 +12,9 @@ const userSchema = mongoose.Schema(
       required: true,
       unique: true,
     },
-    passenger_age: {
-      type: Number,
-      required: true,
+    passenger_dob: {
+      type: Date,
+      // required: true,
     },
     password: {
       type: String,
