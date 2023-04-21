@@ -11,3 +11,7 @@ npm start
 
 Testing
 To run the tests, use the following command:
+
+Some clicks of demo
+
+![postman-register](https://user-images.githubusercontent.com/88920707/233679532-c8c986e6-93b7-416c-a3f0-4be84e196d12.png)
