@@ -1,4 +1,4 @@
-This the backend part for flight ticket booking -  DevRev
+This the backend part for flight ticket booking 
 
 Some clicks of demo
 
